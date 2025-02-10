@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <style>
+        /* Definir temas con variables CSS */
+        :root {
+            --bg-light: #f4f4f4;
+            --text-light: #222;
+            --bg-dark: #222;
+            --text-dark: #f4f4f4;
+            --bg-contrast: #ffcc00;
+            --text-contrast: #222;
+            --font-serif: 'Georgia', serif;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: var(--font-serif);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Modos de tema */
+        body.light-mode {
+            background: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        body.dark-mode {
+            background: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        body.contrast-mode {
+            background: var(--bg-contrast);
+            color: var(--text-contrast);
+        }
+
+        /* Contenedor */
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        /* Botones */
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-theme {
+            background: #444;
+            color: white;
+        }
+
+        .btn-lang {
+            background: #007BFF;
+            color: white;
+        }
+
+        /* Hover */
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <div class="container">
+        <h1 id="greeting">¡Hola Mundo!</h1>
+        <div class="controls">
+            <button class="btn-lang" onclick="toggleLanguage()">🌍 Cambiar Idioma</button>
+            <button class="btn-theme" onclick="toggleTheme()">🌗 Cambiar Tema</button>
+        </div>
+    </div>
+
+    <script>
+        // Manejo de idioma
+        let currentLang = localStorage.getItem("language") || "es";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "es" ? "en" : "es";
+            document.getElementById("greeting").textContent = currentLang === "es" ? "¡Hola Mundo!" : "Hello World!";
+            localStorage.setItem("language", currentLang);
+        }
+
+        // Manejo de temas
+        let themes = ["light-mode", "dark-mode", "contrast-mode"];
+        let currentThemeIndex = localStorage.getItem("themeIndex") || 0;
+
+        function toggleTheme() {
+            document.body.classList.remove(themes[currentThemeIndex]);
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            document.body.classList.add(themes[currentThemeIndex]);
+            localStorage.setItem("themeIndex", currentThemeIndex);
+        }
+
+        // Restaurar idioma y tema guardados
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("greeting").textContent = currentLang === "es" ? "¡Hola Mundo!" : "Hello World!";
+            document.body.classList.add(themes[currentThemeIndex]);
+        });
+    </script>
+
+</body>
+</html>
