@@ -1,0 +1,112 @@
+/*Agregar la fuente que instalé*/
+@font-face {
+    font-family: 'Island Moments';
+    src: url('fuentes/Island_Moments/IslandMoments-Regular.ttf') format('truetype');
+}
+
+/*Dar un estilo general*/
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #9FB9BF;
+}
+
+#titulo {
+    color: #1400F2;
+    font-family: 'Island Moments', fantasy, serif;
+    font-size: 400%;
+    display: inline-block;
+    margin: 3%;
+}
+
+.menu{
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    display: inline-block;
+}
+
+.menu li{
+    color: #48474e;
+    font-family: 'Island Moments';
+    font-size: 35px;
+    list-style: none;
+    display: inline-flex;
+    margin-right: 40px;
+}
+
+/* Estilos para la tarjeta de música */
+.detras{
+    width: 120px;
+    height: 181.03px;
+    background-color: rgba(66, 160, 238, 0.72);
+    border-radius: 10%;
+    margin-left: 25px;
+    margin-top: -205px;
+    padding: 0.5%;
+    position: relative;
+    z-index: 1;
+    transform: rotate(10deg);
+}
+
+.musica{
+    width: 120px;
+    height: 181.03px;
+    background-color: rgba(66, 160, 238, 0.8);
+    border-radius: 10%;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+
+.musica img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#icono{
+    margin-bottom: 5%;
+    float: left;
+}
+
+#bartolito{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    flex-direction: column;
+}
+.caratula{
+    margin: auto;
+    display: block;
+    flex-direction: column;
+}
+
+.reproduccion{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+/* Estilos para la tarjeta de podcast */
+
+.podcast{
+    width: 120px;
+    height: 181.03px;
+    background-color: rgba(66, 160, 238, 0.8);
+    border-radius: 10%;
+    margin-left: 10px;
+    margin-top: 70px;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}

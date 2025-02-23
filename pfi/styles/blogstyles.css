@@ -29,13 +29,18 @@ div footer{
 /*ID de sección y sólo puede haber 1*/
 #secid{
     background-color: rgb(118, 118, 118);
+    margin: 5px;
     border:  1px dashed rgb(141, 231, 205);
+    padding: 10px;
+    border-radius: 10px;
     width: 79%;
     float: left;
 }
 
 .lateral{
-    background-color: rgb(93, 38, 38);
+    background-color: rgba(153, 197, 175, 0.553);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
     width: 20%;
     float: right ;
     border: black;
@@ -43,4 +48,30 @@ div footer{
 
 .Pie{
     clear: both;
+}
+
+.menu{
+    border: 1px groove white;
+    background-color:  rgba(153, 197, 175, 0.553);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px 1px rgb(0, 255, 242);
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
 }
