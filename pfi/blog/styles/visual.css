@@ -1,14 +1,31 @@
 /*Agregar la fuente que instalé*/
 @font-face {
     font-family: 'Island Moments';
-    src: url('fuentes/Island_Moments/IslandMoments-Regular.ttf') format('truetype');
+    src: url('fuentes/Island_Moments/IslandMoments-Regular.ttf') format('truetype');   
 }
+
+@font-face {
+    font-family: 'Itim';
+    src: url(fuentes/Itim/Itim-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Just_me';
+    src: url(fuentes/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format('truetype');
+}
+
 
 /*Dar un estilo general*/
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1{
+    font-family: 'Just_me', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 190%;
+    color: #1400F2;
+    margin: 1%;
+}
 body {
     background-color: #9FB9BF;
 }
@@ -20,6 +37,7 @@ body {
     display: inline-block;
     margin: 3%;
 }
+
 
 .menu{
     justify-content: flex-start;
@@ -38,14 +56,19 @@ body {
     margin-right: 40px;
 }
 
-/* Estilos para la tarjeta de música */
+li:hover{
+    text-decoration: underline;
+}
+
+/* Estilos para la tarjeta de música y podcast */
 .detras{
-    width: 120px;
-    height: 181.03px;
+    width: 11.1%;
+    height: 20%;
+    min-height: 231.03px;
     background-color: rgba(66, 160, 238, 0.72);
     border-radius: 10%;
     margin-left: 25px;
-    margin-top: -205px;
+    margin-top: -258px;
     padding: 0.5%;
     position: relative;
     z-index: 1;
@@ -53,12 +76,12 @@ body {
 }
 
 .musica{
-    width: 120px;
-    height: 181.03px;
+    width: 11.1%;
+    height: 20%;
     background-color: rgba(66, 160, 238, 0.8);
     border-radius: 10%;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 90px;
     padding: 0.5%;
     clear: both;
     position: relative;
@@ -82,12 +105,13 @@ body {
     display: block;
     flex-direction: column;
 }
+
 .caratula{
     margin: auto;
     display: block;
     flex-direction: column;
 }
-
+/* Estilos para los elementos de reproducción*/
 .reproduccion{
     margin-top: 5px;
     display: flex;
@@ -99,12 +123,132 @@ body {
 /* Estilos para la tarjeta de podcast */
 
 .podcast{
-    width: 120px;
-    height: 181.03px;
+    width: 11.1%;
+    height: 20%;
     background-color: rgba(66, 160, 238, 0.8);
     border-radius: 10%;
     margin-left: 10px;
     margin-top: 70px;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos para las tarjetas de contenido */
+#fondo{
+    margin-top: -40%;
+    float: right;
+    position: relative;
+    z-index: 1;
+    opacity: 0.6;
+    filter: blur(4px);
+}
+
+.tarjeta_grande1{
+    width: 14%;
+    height: 600px;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: left;
+    margin-left: 23%;
+    margin-top: -44%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+.contenido{
+    width: auto;
+    height: 80%;
+    margin: auto;
+    padding: 50%;
+    background-color:rgba(141, 138, 138, 0.98);
+    border-radius: 4%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+.icono_tarjeta{
+    margin: auto;
+    margin-top: 2%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto{
+    padding: 5%;
+    font-family: 'Itim', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#tarjeta_grande2{
+    width: 14%;
+    height: 600px;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: right;
+    margin-right: 2%;
+    margin-top: -44%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+#tarjeta_chica1{
+    width: 14%;
+    height: 30%;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: right;
+    margin-right: 40%;
+    margin-top: -44%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+#tarjeta_chica2{
+    width: 14%;
+    height: 30%;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: right;
+    margin-right: 20%;
+    margin-top: -44%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+#tarjeta_chica3{
+    width: 14%;
+    height: 30%;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: right;
+    margin-right: 20%;
+    margin-top: -20%;
+    padding: 0.5%;
+    clear: both;
+    position: relative;
+    z-index: 2;
+}
+
+#tarjeta_chica4{
+    width: 14%;
+    height: 30%;
+    background-color: rgba(217, 217, 217, 0.63);
+    border-radius: 7%;
+    float: right;
+    margin-right: 40%;
+    margin-top: -22%;
     padding: 0.5%;
     clear: both;
     position: relative;
